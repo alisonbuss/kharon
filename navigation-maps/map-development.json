@@ -8,15 +8,13 @@
     ],
     "system": "coreos",
     "platform": "vagrant",
-    "provisioners": [
-        {
-            "type": "ansible",
-            "provide-business": [
-                "app-x", "app-y"
-            ],
-            "provide-services": [
-                "kubernetes"
-            ]
-        }
-    ]
+    "provisioner": {
+        "type": "ansible",
+        "provide-business": [
+            "app-x", "app-y"
+        ],
+        "provide-services": [
+            "kubernetes"
+        ]
+    }
 }

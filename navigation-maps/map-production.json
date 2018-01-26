@@ -8,22 +8,20 @@
     ],
     "system": "coreos",
     "platform": "aws",
-    "provisioners": [
-        {
-            "type": "ansible",
-            "provide-business": [
-                "app-x", "app-y",  "app-z"
-            ],
-            "provide-services": [
-                "kubernetes",
-                "netdata",
-                "prometheus",
-                "grafana",
-                "konga",
-                "graylog",
-                "jenkins",
-                "rocket-chat"
-            ]
-        }
-    ]
+    "provisioner": {
+        "type": "ansible",
+        "provide-business": [
+            "app-x", "app-y",  "app-z"
+        ],
+        "provide-services": [
+            "kubernetes",
+            "netdata",
+            "prometheus",
+            "grafana",
+            "konga",
+            "graylog",
+            "jenkins",
+            "rocket-chat"
+        ]
+    }
 }
