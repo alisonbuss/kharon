@@ -1,0 +1,22 @@
+{
+    "environment": "development",
+    "description": "You will navigate to the development environment",
+    "packer-image": "provide-coreos-image",
+    "packer-recreate-image ": "false",
+    "packer-only": [
+        "virtualbox-iso"
+    ],
+    "system": "coreos",
+    "platform": "vagrant",
+    "provisioners": [
+        {
+            "type": "ansible",
+            "provide-business": [
+                "app-x", "app-y"
+            ],
+            "provide-services": [
+                "kubernetes"
+            ]
+        }
+    ]
+}

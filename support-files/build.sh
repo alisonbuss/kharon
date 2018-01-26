@@ -4,15 +4,12 @@
 # @descr: Script de inicialização de execução do projeto no terraform     
 # @fonts:  
 # @example: 
-#    $ bash BigBang.sh (plan,apply,show,destroy) dev vagrant
-#    $ bash BigBang.sh (plan,apply,show,destroy) test azure
-#    $ bash BigBang.sh (plan,apply,show,destroy) prod aws
+#    $ bash build.sh (plan,apply,show,destroy) dev vagrant
+#    $ bash build.sh (plan,apply,show,destroy) test azure
+#    $ bash build.sh (plan,apply,show,destroy) prod aws
 #-------------------------------------------------------------#
 
-# spacial-station-gear
-# Spacial Station - Projeto Basica DevOps
-
-function startBigBang {
+function startBuilding {
     local TERRAFORM=$(which terraform);
     local GLOBAL_VARS="../../globals.tfvars";
     local ENVIRONMENT_VARS="../environment.tfvars";
@@ -45,6 +42,6 @@ function startBigBang {
     esac
 } 
 
-#startBigBang $1;
+#startBuilding $1;
 
 exit 0;

@@ -9,34 +9,7 @@
 #		  https://github.com/dyson/packer-qemu-coreos-container-linux/blob/master/Makefile	
 # @example:
 #       $ make plan compile build install vagrant
-#   OR
-#       $ make plan
-#   OR
-#       $ make compile  
-#   OR
-#       $ make build  
-#   OR
-#       $ make build-force  
-#   OR
-#       $ make install  
-#   OR
-#       $ make clean  
-#   OR
-#       $ make vagrant  
-#   OR
-#       $ make vagrant VAGRANT_CLI="status"  
-#   OR
-#       $ make vagrant VAGRANT_CLI="ssh coreos01.example.com"   
-#   OR
-#       $ make vagrant VAGRANT_CLI="box list"   
-#   OR
-#       $ make vagrant VAGRANT_CLI="global-status"   
-#   OR
-#       $ make vagrant VAGRANT_CLI="destroy"   
-#	OR
-#		$ make plan compile build install vagrant \
-#			  NEW_MODEL_NAME="coreos-vagrant" \
-#			  NEW_MODEL_SOURCE_FILE="./packer-new-model/coreos-vagrant.json"
+#  
 #-------------------------------------------------------------#
 
 # DEFAULT VARIABLES - Structural

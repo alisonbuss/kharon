@@ -1,0 +1,29 @@
+{
+    "environment": "production",
+    "description": "You will navigate to the production environment",
+    "packer-image": "provide-coreos-image",
+    "packer-recreate-image ": "true",
+    "packer-only": [
+        "amazon-ebs"
+    ],
+    "system": "coreos",
+    "platform": "aws",
+    "provisioners": [
+        {
+            "type": "ansible",
+            "provide-business": [
+                "app-x", "app-y",  "app-z"
+            ],
+            "provide-services": [
+                "kubernetes",
+                "netdata",
+                "prometheus",
+                "grafana",
+                "konga",
+                "graylog",
+                "jenkins",
+                "rocket-chat"
+            ]
+        }
+    ]
+}

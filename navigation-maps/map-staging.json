@@ -1,0 +1,29 @@
+{
+    "environment": "staging",
+    "description": "You will navigate to the staging environment",
+    "packer-image": "provide-coreos-image",
+    "packer-recreate-image ": "true",
+    "packer-only": [
+        "virtualbox-iso", "googlecompute"
+    ],
+    "system": "coreos",
+    "platform": "google",
+    "provisioners": [
+        {
+            "type": "ansible",
+            "provide-business": [
+                "app-x", "app-y",  "app-z"
+            ],
+            "provide-services": [
+                "kubernetes",
+                "netdata",
+                "prometheus",
+                "grafana",
+                "konga",
+                "graylog",
+                "jenkins",
+                "rocket-chat"
+            ]
+        }
+    ]
+}
