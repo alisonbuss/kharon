@@ -12,6 +12,8 @@
 #  
 #-------------------------------------------------------------#
 
+https://github.com/stylelab-io/kubernetes-coreos-terraform
+
 # DEFAULT VARIABLES - Structural
 WORKING_DIRECTORY       ?= .
 #WORKING_DIRECTORY      ?= `pwd`

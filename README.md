@@ -5,6 +5,7 @@ Projeto de ambiente básico DevOps.
 > - **Status do Projeto:** Em estagio inicial, elaborando o conceito de um ambiente DevOps.
 >
 
+https://github.com/stylelab-io/kubernetes-coreos-terraform
 
  ██ ▄█▀ ██░ ██  ▄▄▄       ██▀███   ▒█████   ███▄    █ 
  ██▄█▒ ▓██░ ██▒▒████▄    ▓██ ▒ ██▒▒██▒  ██▒ ██ ▀█   █ 
