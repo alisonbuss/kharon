@@ -5,6 +5,40 @@ Projeto de ambiente básico DevOps.
 > - **Status do Projeto:** Em estagio inicial, elaborando o conceito de um ambiente DevOps.
 >
 
+
+
+
+--kharon
+----image
+-------coreos-packer
+----------templates
+----------environments
+----------provision
+----------README.md
+-------ubuntu-packer
+-------centos-packer
+-------Makefile
+-------README.md
+----infrastructure
+-------global
+-------system
+-------platforms
+-------resources
+-------environments
+-------Makefile
+-------README.md
+----provisioning
+-------Makefile
+-------README.md
+----.gitignore
+----LICENSE
+----Makefile
+----README.md
+----README_LANG_EN.md
+
+
+
+
 https://github.com/stylelab-io/kubernetes-coreos-terraform
 
  ██ ▄█▀ ██░ ██  ▄▄▄       ██▀███   ▒█████   ███▄    █ 
