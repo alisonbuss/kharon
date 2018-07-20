@@ -32,6 +32,12 @@ Projeto de ambiente básico DevOps.
 ----provisioning
 -------Makefile
 -------README.md
+----provisioners
+-------cluster-kubernetes
+-------monitoring-services
+-------continuous-integration-services
+-------publish-business
+-------README.md
 ----.gitignore
 ----LICENSE
 ----Makefile
