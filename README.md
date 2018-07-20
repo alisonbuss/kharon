@@ -9,6 +9,8 @@ Projeto de ambiente básico DevOps.
 
 
 --kharon
+----builds
+----documentation
 ----image
 -------coreos-packer
 ----------templates
@@ -35,6 +37,25 @@ Projeto de ambiente básico DevOps.
 ----Makefile
 ----README.md
 ----README_LANG_EN.md
+----kharon
+
+$ sh kharon data ls
+$ sh kharon vagrant -v
+$ sh kharon terraform -v
+$ sh kharon ansible -v
+$ sh kharon packer -v
+$ sh kharon etcdctl -v
+$ sh kharon kubectl -v
+$ sh kharon kubernetic -v
+
+
+
+
+
+
+
+
+
 
 
 
