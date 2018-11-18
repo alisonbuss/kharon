@@ -1,0 +1,3 @@
+--> Kharon.depen
+INFO: The Kharon project has the following dependencies:
+[vagrant, terraform, ansible, packer, etcdctl, kubectl, kubernetic]
