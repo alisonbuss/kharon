@@ -7,6 +7,7 @@ Projeto de ambiente básico DevOps.
 
 ```text
 
+-----------------------------------------------
 Projetos:
 
   kharon
@@ -35,6 +36,8 @@ Projetos:
   --provide-continuous-integration
   --provide-kubernetes-web-ui
 
+
+-----------------------------------------------
 Fluxo da implantação:
 
   >> Packer 
@@ -46,9 +49,11 @@ Fluxo da implantação:
               >> ``Kharon IaC!!!´´
 
 
+-----------------------------------------------
+Makefile:
+
   - Makefile - ENVIRONMENT VARIABLES
 
-      - SYSTEM=coreos            # (CoreOS, CentOS, Ubuntu)
       - PLATFORM=vagrant         # (vagrant, aws, google, digitalocean)
       - ENVIRONMENT=development  # (development, staging, production)
 
@@ -58,7 +63,7 @@ Fluxo da implantação:
       - publish-image-centos
       - publish-image-ubuntu
 
-  - Makefile - Terraform
+  - Makefile - Terraform/Vagrant
 
       - machines-plan
       - machines-status
@@ -78,35 +83,40 @@ Fluxo da implantação:
 
   - Makefile - Ansible - kubernetes
 
-      - provide-k8s-admin-client
-      - provide-k8s-basic-environment
-      - provide-k8s-cluster-etcd
-      - provide-k8s-cluster-master
-      - provide-k8s-cluster-worker
-      - provide-k8s-new-member-etcd
-      - provide-k8s-new-member-master
-      - provide-k8s-new-member-worker
+      - provide-admin-client
+      - provide-cluster-all
+      - provide-cluster-etcd
+      - provide-cluster-master
+      - provide-cluster-worker
+      - provide-new-member-etcd
+      - provide-new-member-master
+      - provide-new-member-worker
       - provide-kubernetes
 
   - Makefile - Ansible - kubernetes - Service
 
-      - provide-kubernetes-services
+      - provide-network-policy
+      - provide-monitoring
+      - provide-backup
+      - provide-continuous-integration
+      - provide-kubernetes-web-ui
 
-  - Makefile - Ansible - kubernetes - Business
 
-      - provide-kubernetes-business
-
-
+-----------------------------------------------
 machine:
   system: [coreos, ubuntu, centos],
   size: [micro, small, medium, big],
 
+
+-----------------------------------------------
 versions depen:
   vagrant: "2.0.1"
   terraform: "0.11.1"
   packer: "1.1.3"
   ansible: "2.6.1"
 
+
+-----------------------------------------------
 versions:
   coreos: "1967.0.0"
   ubuntu: "18.04.1"
@@ -120,43 +130,48 @@ versions:
   ceph: "10.1.1"
 
 
-
+-----------------------------------------------
 --kharon
 ----builds
 ----documentation
 ----image
--------coreos-packer
+-------kharon-coreos-packer
 ----------templates
 ----------environments
 ----------provision
 ----------README.md
--------ubuntu-packer
--------centos-packer
+-------kharon-ubuntu-packer
+-------kharon-centos-packer
 -------Makefile
 -------README.md
 ----infrastructure
--------global
--------system
--------platforms
--------resources
--------environments
+-------kharon-kubernetes-vagrant
+-------kharon-kubernetes-terraform
+-------kharon-storage-vagrant
+-------kharon-storage-terraform
+----------global
+----------system
+----------platforms
+----------resources
+----------environments
+----------Makefile
+-------README.md
+----configuration
+-------kharon-kubernetes-ansible
+-------kharon-ceph-storage-ansible
+-------kharon-etcd-backup-ansible
 -------Makefile
 -------README.md
-----provisioning
+----services
+-------kharon-kubernetes-services-ansible
 -------Makefile
--------README.md
-----provisioners
--------cluster-kubernetes
--------monitoring-services
--------continuous-integration-services
--------publish-business
 -------README.md
 ----.gitignore
 ----LICENSE
 ----Makefile
 ----README.md
-----README_LANG_EN.md
 ----kharon
+----machines.json
 
 $ sh kharon data ls
 $ sh kharon vagrant -v
