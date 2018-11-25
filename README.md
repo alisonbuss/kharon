@@ -30,11 +30,57 @@ Projetos:
 
   --SERVICE
   kharon-kubernetes-services-ansible
-  --provide-network-policy
-  --provide-monitoring
-  --provide-backup
-  --provide-continuous-integration
-  --provide-kubernetes-web-ui
+    --provide-network-policy
+    --provide-monitoring
+    --provide-backup
+    --provide-continuous-integration
+    --provide-kubernetes-web-ui
+
+
+-----------------------------------------------
+machine:
+  system: [coreos, ubuntu, centos],
+  size: [micro, small, medium, big],
+
+
+-----------------------------------------------
+versions depen:
+  vagrant: "2.0.1"
+  terraform: "0.11.1"
+  packer: "1.1.3"
+  ansible: "2.6.1"
+
+
+-----------------------------------------------
+versions image:
+  coreos: "1967.0.0"
+  ubuntu: "18.04.1"
+  centos: "7.5.1804"
+
+versions back-end:
+  k8s: "1.10.0"
+  etcd: "3.2.15"
+  rkt: "1.30.0"
+  docker: "18.04.0"
+  flannel: "0.10.0"
+  peervpn: "0-044"
+  ceph: "10.1.1"
+
+versions front-end:
+  rook: "0.8.3"
+  calico-canal: ""
+  kube-router: ""
+  traefik: ""
+  kube-web-ui: ""
+  netdata: ""
+  prometheus: "" 
+  grafana: ""
+  graylog: ""
+  jenkins: ""
+  rocket-chat: ""
+
+versions manager:
+  kharon-cocoon: ""
 
 
 -----------------------------------------------
@@ -91,7 +137,6 @@ Makefile:
       - provide-new-member-etcd
       - provide-new-member-master
       - provide-new-member-worker
-      - provide-kubernetes
 
   - Makefile - Ansible - kubernetes - Service
 
@@ -100,34 +145,6 @@ Makefile:
       - provide-backup
       - provide-continuous-integration
       - provide-kubernetes-web-ui
-
-
------------------------------------------------
-machine:
-  system: [coreos, ubuntu, centos],
-  size: [micro, small, medium, big],
-
-
------------------------------------------------
-versions depen:
-  vagrant: "2.0.1"
-  terraform: "0.11.1"
-  packer: "1.1.3"
-  ansible: "2.6.1"
-
-
------------------------------------------------
-versions:
-  coreos: "1967.0.0"
-  ubuntu: "18.04.1"
-  centos: "7.5.1804"
-  k8s: "1.10.0"
-  etcd: "3.2.15"
-  rkt: "1.30.0"
-  docker: "18.04.0"
-  flannel: "0.10.0"
-  peervpn: "0-044"
-  ceph: "10.1.1"
 
 
 -----------------------------------------------
@@ -183,7 +200,32 @@ $ sh kharon kubectl -v
 $ sh kharon kubernetic -v
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 https://github.com/stylelab-io/kubernetes-coreos-terraform
+https://github.com/rook/rook/releases
+https://rook.io/docs/rook/v0.8/
+https://jujucharms.com/kubernetes
+https://jujucharms.com/
 
  ██ ▄█▀ ██░ ██  ▄▄▄       ██▀███   ▒█████   ███▄    █ 
  ██▄█▒ ▓██░ ██▒▒████▄    ▓██ ▒ ██▒▒██▒  ██▒ ██ ▀█   █ 
