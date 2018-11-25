@@ -46,8 +46,8 @@ machine:
 -----------------------------------------------
 versions depen:
   vagrant: "2.0.1"
-  terraform: "0.11.1"
   packer: "1.1.3"
+  terraform: "0.11.1"
   ansible: "2.6.1"
 
 
@@ -100,8 +100,9 @@ Makefile:
 
   - Makefile - ENVIRONMENT VARIABLES
 
-      - PLATFORM=vagrant         # (vagrant, aws, google, digitalocean)
-      - ENVIRONMENT=development  # (development, staging, production)
+      - MACHINES=./machines.json  # (Boot structure of all machines in the cluster)
+      - PLATFORM=vagrant          # (vagrant, aws, google, digitalocean)
+      - ENVIRONMENT=development   # (development, staging, production)
 
   - Makefile - Packer
 

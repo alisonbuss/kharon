@@ -1,0 +1,122 @@
+[
+    { 
+        "cluster": "etcd",
+        "description": "Etcd Servers, a storage cluster of (key/value) distributed",
+        "machines": [
+            {
+                "hostname": "etcd01",
+                "domain": "etcd01.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.33.101",
+                "size": "small",
+                "active": true
+            },
+            {
+                "hostname": "etcd02",
+                "domain": "etcd02.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.33.102",
+                "size": "micro",
+                "active": true
+            },
+            {
+                "hostname": "etcd03",
+                "domain": "etcd03.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.33.103",
+                "size": "micro",
+                "active": true
+            }
+        ]
+    },
+    { 
+        "cluster": "k8s-master",
+        "description": "Kubernetes Master Servers, responsible for managing the hosts (masters and workers) and the general decisions of the cluster",
+        "machines": [
+            {
+                "hostname": "master01",
+                "domain": "master01.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.66.101",
+                "size": "medium",
+                "active": true
+            },
+            {
+                "hostname": "master02",
+                "domain": "master02.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.66.102",
+                "size": "small",
+                "active": true
+            },
+            {
+                "hostname": "master03",
+                "domain": "master03.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.66.103",
+                "size": "small",
+                "active": true
+            }
+        ]
+    },
+    { 
+        "cluster": "k8s-worker",
+        "description": "Kubernetes Worker Servers, responsible for managing the network between the containers and their availability",
+        "machines": [
+            {
+                "hostname": "worker01",
+                "domain": "worker01.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.99.101",
+                "size": "big",
+                "active": true
+            },
+            {
+                "hostname": "worker02",
+                "domain": "worker02.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.99.102",
+                "size": "medium",
+                "active": true
+            },
+            {
+                "hostname": "worker03",
+                "domain": "worker03.kharon.com",
+                "system": "coreos",
+                "ip_address": "192.168.99.103",
+                "size": "medium",
+                "active": true
+            }
+        ]
+    },
+    { 
+        "cluster": "storage",
+        "description": "",
+        "machines": [
+            {
+                "hostname": "storage1",
+                "domain": "storage1.kharon.com",
+                "system": "centos",
+                "ip_address": "192.168.11.101",
+                "size": "medium",
+                "active": true
+            },
+            {
+                "hostname": "storage2",
+                "domain": "storage2.kharon.com",
+                "system": "centos",
+                "ip_address": "192.168.11.102",
+                "size": "medium",
+                "active": true
+            },
+            {
+                "hostname": "storage3",
+                "domain": "storage3.kharon.com",
+                "system": "centos",
+                "ip_address": "192.168.11.103",
+                "size": "medium",
+                "active": true
+            }
+        ]
+    }
+]
