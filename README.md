@@ -78,8 +78,6 @@ versions front-end:
   graylog: ""
   jenkins: ""
   rocket-chat: ""
-
-versions manager:
   kharon-cocoon: ""
 
 
@@ -157,6 +155,7 @@ Makefile:
 ----------templates
 ----------environments
 ----------provision
+----------Makefile
 ----------README.md
 -------kharon-ubuntu-packer
 -------kharon-centos-packer
@@ -173,6 +172,8 @@ Makefile:
 ----------resources
 ----------environments
 ----------Makefile
+----------README.md
+-------Makefile
 -------README.md
 ----configuration
 -------kharon-kubernetes-ansible
@@ -188,8 +189,9 @@ Makefile:
 ----LICENSE
 ----Makefile
 ----README.md
-----kharon
+----kharon.sh
 ----machines.json
+
 
 $ sh kharon data ls
 $ sh kharon vagrant -v
