@@ -1,0 +1,18 @@
+dsgdasdgsahgdshgad /mnt/sda2/git-repositories/public/kharon
+builds
+configuration
+deploy-dev.sh
+deploy-prod.sh
+deploy-test.sh
+documentation
+environment
+image
+infrastructure
+kharon-config.json
+kharon-packages.json
+kharon.sh
+LICENSE
+Makefile
+README.md
+services
+support-files

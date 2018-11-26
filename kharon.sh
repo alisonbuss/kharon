@@ -2,6 +2,19 @@
 #-----------------------|DOCUMENTATION|-----------------------#
 # @descr: 
 # @example:
+
+#       $ sh kharon help
+#       $ sh kharon --help
+#       $ sh kharon --state
+#       $ sh kharon --dep
+#       $ sh kharon --dep-install ubuntu
+#       $ sh kharon --init
+#       $ sh kharon --update
+#       $ sh kharon --version
+
+
+
+
 #       $ sh kharon help
 #       $ sh kharon depen
 #       $ sh kharon install ubuntu

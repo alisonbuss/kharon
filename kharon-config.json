@@ -32,57 +32,5 @@
         "jenkins": "",
         "rocket-chat": "",
         "kharon-cocoon": ""
-    },
-    "projects-image": [
-        { 
-            "url": "https://github.com/alisonbuss/kharon-coreos-packer", 
-            "version": "0.0.1", "release": "beta"
-        },
-        { 
-            "url": "https://github.com/alisonbuss/kharon-ubuntu-packer", 
-            "version": "0.0.1", "release": "beta"
-        },
-        { 
-            "url": "https://github.com/alisonbuss/kharon-centos-packer", 
-            "version": "0.0.1", "release": "beta"
-        }
-    ],
-    "projects-infra": [
-        { 
-            "url": "https://github.com/alisonbuss/kharon-kubernetes-vagrant", 
-            "version": "0.0.1", "release": "beta"
-        },
-        { 
-            "url": "https://github.com/alisonbuss/kharon-kubernetes-terraform", 
-            "version": "0.0.1", "release": "beta"
-        },
-        { 
-            "url": "https://github.com/alisonbuss/kharon-storage-vagrant", 
-            "version": "0.0.1", "release": "beta"
-        },
-        { 
-            "url": "https://github.com/alisonbuss/kharon-storage-terraform", 
-            "version": "0.0.1", "release": "beta"
-        }
-    ],
-    "projects-config": [
-        { 
-            "url": "https://github.com/alisonbuss/kharon-kubernetes-ansible", 
-            "version": "0.0.1", "release": "beta"
-        },
-        { 
-            "url": "https://github.com/alisonbuss/kharon-ceph-storage-ansible", 
-            "version": "0.0.1", "release": "beta"
-        },
-        { 
-            "url": "https://github.com/alisonbuss/kharon-etcd-backup-ansible", 
-            "version": "0.0.1", "release": "beta"
-        }
-    ],
-    "projects-service": [
-        { 
-            "url": "https://github.com/alisonbuss/kharon-kubernetes-services-ansible", 
-            "version": "0.0.1", "release": "beta"
-        }
-    ]
+    }
 }

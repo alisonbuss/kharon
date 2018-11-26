@@ -1,0 +1,65 @@
+{
+    "packages-image": [
+        { 
+            "url": "https://github.com/alisonbuss/kharon-coreos-packer", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "coreos-packer"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-ubuntu-packer", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "ubuntu-packer"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-centos-packer", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "centos-packer"
+        }
+    ],
+    "packages-infra": [
+        { 
+            "url": "https://github.com/alisonbuss/kharon-kubernetes-vagrant", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "kubernetes-vagrant"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-kubernetes-terraform", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "kubernetes-terraform"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-storage-vagrant", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "storage-vagrant"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-storage-terraform", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "storage-terraform"
+        }
+    ],
+    "packages-config": [
+        { 
+            "url": "https://github.com/alisonbuss/kharon-kubernetes-ansible", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "kubernetes-ansible"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-ceph-storage-ansible", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "ceph-storage-ansible"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-etcd-backup-ansible", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "etcd-backup-ansible"
+        }
+    ],
+    "packages-service": [
+        { 
+            "url": "https://github.com/alisonbuss/kharon-kubernetes-services-ansible", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "kubernetes-services-ansible"
+        }
+    ]
+}
