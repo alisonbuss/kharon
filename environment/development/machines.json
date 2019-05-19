@@ -2,6 +2,13 @@
     { 
         "cluster": "etcd",
         "description": "Etcd Servers, a storage cluster of (key/value) distributed",
+        "min-size": "3",
+        "max-size": "7",
+        "auto-machines": {
+            "hostname": "etcd", "domain": "kharon.com", 
+            "system": "coreos",
+            "size": "small"
+        },
         "machines": [
             {
                 "hostname": "etcd01",
