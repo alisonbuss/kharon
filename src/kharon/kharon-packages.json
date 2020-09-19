@@ -1,0 +1,25 @@
+{
+    "image-packages": [
+        { 
+            "url": "https://github.com/alisonbuss/kharon-coreos", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "images/kharon-coreos"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-ubuntu", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "images/kharon-ubuntu"
+        },
+        { 
+            "url": "https://github.com/alisonbuss/kharon-centos", 
+            "version": "0.0.1", "release": "beta",
+            "folder": "images/kharon-centos"
+        }
+    ],
+    "platform-packages": [
+ 
+    ],
+    "service-packages": [
+
+    ]
+}

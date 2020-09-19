@@ -8,160 +8,33 @@ Projeto de ambiente básico DevOps.
 ```text
 
 -----------------------------------------------
-Dependências:
-
-  coreos-packer
-  ubuntu-packer
-  centos-packer
-
-  cluster-vault-vagrant
-  cluster-vault-terraform
-  cluster-vault-ansible
-
-  cluster-kubernetes-vagrant
-  cluster-kubernetes-terraform
-  cluster-kubernetes-ansible
-
-  cluster-kafka-vagrant
-  cluster-kafka-terraform
-  cluster-kafka-ansible
-
-  cluster-traefik-vagrant
-  cluster-traefik-terraform
-  cluster-traefik-ansible
-
-  cluster-ceph-vagrant
-  cluster-ceph-terraform
-  cluster-ceph-ansible
-
-
 Projetos:
 
   kharon
-  ├── environment/
-  │   ├── development/
-  │   ├── homologation/
-  │   ├── production/
-  │   └── staging/
-  ├── images/
-  │   ├── kharon-centos/
-  │   ├── kharon-coreos/
-  │   └── kharon-ubuntu/
-  ├── platforms/
-  │   ├── kharon-ceph/
-  │   │   ├── configuration/
-  │   │   ├── environment/
-  │   │   └── infrastructure/
-  │   ├── kharon-etcd/
-  │   ├── kharon-kafka/
-  │   ├── kharon-kube/
-  │   ├── kharon-traefik/
-  │   └── kharon-vault/
-  ├── services/
-  │   ├── kharon-kube-backup/
-  │   ├── kharon-kube-ci-cd/
-  │   ├── kharon-kube-monitoring/
-  │   ├── kharon-kube-network-policy/
-  │   └── kharon-kube-web-ui/
-  ├── support-files/
-  ├── kharon-packages.json
-  ├── kharon.sh
-  ├── LICENSE
-  ├── Makefile
-  └── README.md
 
+  --IMAGE
+  kharon-coreos-packer
+  kharon-ubuntu-packer
+  kharon-centos-packer
 
+  --INFRA
+  kharon-kubernetes-vagrant
+  kharon-kubernetes-terraform
+  kharon-storage-vagrant
+  kharon-storage-terraform
 
+  --CONFG
+  kharon-kubernetes-ansible
+  kharon-ceph-storage-ansible
+  kharon-etcd-backup-ansible
 
-
-
-
-  kharon002
-  ├── environment/
-  │   ├── development/
-  │   ├── homologation/
-  │   ├── production/
-  │   └── staging/
-  ├── images/
-  │   ├── image-centos/
-  │   ├── image-coreos/
-  │   └── image-ubuntu/
-  ├── infrastructure/
-  │   ├── cluster-ceph/
-  │   ├── cluster-etcd/
-  │   ├── cluster-kafka/
-  │   ├── cluster-kube/
-  │   ├── cluster-traefik/
-  │   └── cluster-vault/
-  ├── configuration/
-  │   ├── inventories/
-  │   ├── roles/
-  │   ├── library/
-  │   |   ├── authorized-key-ssh/
-  │   |   ├── files/
-  │   |   ├── tasks/
-  |   |   └── variables/
-  │   └── playbooks/
-  │       ├── setups/
-  │       |   └── setup-admin-client/
-  │       ├── images/
-  │       |   ├── deploy-image-centos/
-  │       |   ├── deploy-image-coreos/
-  │       |   └── deploy-image-ubuntu/
-  │       ├── infrastructures/
-  │       |   ├── deploy-cluster-ceph/
-  │       |   ├── deploy-cluster-etcd/
-  │       |   ├── deploy-cluster-kafka/
-  │       |   ├── deploy-cluster-kube/
-  │       |   ├── deploy-cluster-traefik/
-  │       |   └── deploy-cluster-vault/
-  │       ├── configs/
-  │       |   ├── config-cluster-ceph/
-  │       |   ├── config-cluster-etcd/
-  │       |   ├── config-cluster-kafka/
-  │       |   ├── config-cluster-kube/
-  │       |   ├── config-cluster-traefik/
-  │       |   └── config-cluster-vault/
-  │       ├── services/
-  │       |   ├── service-kube-backup/
-  │       |   ├── service-kube-ci-cd/
-  │       |   ├── service-kube-monitoring/
-  │       |   ├── service-kube-network-policy/
-  │       |   └── service-kube-web-ui/
-  │       └── tests/
-  │           ├── admin-client-test/
-  │           ├── cluster-ceph-test/
-  │           ├── cluster-etcd-test/
-  │           ├── cluster-kafka-test/
-  │           ├── cluster-kube-test/
-  │           ├── cluster-traefik-test/
-  │           └── cluster-vault-test/
-  ├── support-files/
-  ├── kharon-config.json
-  ├── kharon-machines.json
-  ├── kharon-package.json
-  ├── kharon.sh
-  ├── LICENSE
-  ├── Makefile
-  └── README.md
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  --SERVICE
+  kharon-kubernetes-services-ansible
+    --provide-network-policy
+    --provide-monitoring
+    --provide-backup
+    --provide-continuous-integration
+    --provide-kubernetes-web-ui
 
 
 -----------------------------------------------
@@ -402,32 +275,37 @@ kubernetes01.br.saopaulo.kharon.oi
 
 
 
-
 kharon
-
---IMAGE
-kharon-coreos-packer
-kharon-ubuntu-packer
-kharon-centos-packer
-
---INFRA
-kharon-kubernetes-vagrant
-kharon-kubernetes-terraform
-kharon-storage-vagrant
-kharon-storage-terraform
-
---CONFG
-kharon-kubernetes-ansible
-kharon-ceph-storage-ansible
-kharon-etcd-backup-ansible
-
---SERVICE
-kharon-kubernetes-services-ansible
-  --provide-network-policy
-  --provide-monitoring
-  --provide-backup
-  --provide-continuous-integration
-  --provide-kubernetes-web-ui
+├── environment/
+│   ├── development/
+│   ├── homologation/
+│   ├── production/
+│   └── staging/
+├── images/
+│   ├── kharon-centos/
+│   ├── kharon-coreos/
+│   └── kharon-ubuntu/
+├── platforms/
+│   ├── kharon-ceph/
+│   │   ├── configuration/
+│   │   ├── environment/
+│   │   └── infrastructure/
+│   ├── kharon-etcd/
+│   ├── kharon-kafka/
+│   ├── kharon-kube/
+│   ├── kharon-traefik/
+│   └── kharon-vault/
+├── services/
+│   ├── kharon-kube-backup/
+│   ├── kharon-kube-ci-cd/
+│   ├── kharon-kube-monitoring/
+│   ├── kharon-kube-network-policy/
+│   └── kharon-kube-web-ui/
+├── support-files/
+├── LICENSE
+├── Makefile
+├── README.md
+└── kharon.sh
 
 
 
